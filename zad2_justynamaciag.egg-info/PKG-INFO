@@ -1,0 +1,72 @@
+Metadata-Version: 1.1
+Name: zad2-justynamaciag
+Version: 0.1.5
+Summary: Estimating complexity od function
+Home-page: https://github.com/justynamaciag/zad2-justynamaciag
+Author: Justyna Maciąg
+Author-email: justynamaciag96@gmail.com
+License: GNU General Public License v3
+Description: ==================
+        zad2-justynamaciag
+        ==================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/zad2_justynamaciag.svg
+                :target: https://pypi.python.org/pypi/zad2_justynamaciag
+        
+        .. image:: https://img.shields.io/travis/justynamaciag/zad2_justynamaciag.svg
+                :target: https://travis-ci.org/justynamaciag/zad2_justynamaciag
+        
+        .. image:: https://readthedocs.org/projects/zad2-justynamaciag/badge/?version=latest
+                :target: https://zad2-justynamaciag.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        .. image:: https://pyup.io/repos/github/justynamaciag/zad2_justynamaciag/shield.svg
+             :target: https://pyup.io/repos/github/justynamaciag/zad2_justynamaciag/
+             :alt: Updates
+        
+        
+        Estimating complexity od function
+        
+        
+        * Free software: GNU General Public License v3
+        * Documentation: https://zad2-justynamaciag.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        ---------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2017-05-08)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: zad2_justynamaciag
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

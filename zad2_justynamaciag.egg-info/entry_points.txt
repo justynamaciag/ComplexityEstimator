@@ -1,0 +1,3 @@
+[console_scripts]
+zad2_justynamaciag = zad2_justynamaciag.cli:main
+

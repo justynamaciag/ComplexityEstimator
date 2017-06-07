@@ -1,0 +1,4 @@
+Recenzje zadania 1:
+https://github.com/AGHPythonCourse2017/zad01-Fapfood/pull/1
+https://github.com/AGHPythonCourse2017/zad01-mwoss/pull/1
+https://github.com/AGHPythonCourse2017/zad01-JakDar/pull/1
