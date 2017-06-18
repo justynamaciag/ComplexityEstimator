@@ -15,10 +15,10 @@ def get_log():
     return logger
 
 @click.command()
-@click.option('--file_name', prompt = 'Name of the file (must be with .py extension)',  help = 'File to test'""", type=click.Path(exists=True)""")
-@click.option("--cleaner", prompt='Cleaner', help = "Give cleaner")
-@click.option('--function', prompt = 'Name of the class/function', help = 'Function to test')
-@click.option('--structure', prompt='Name of the function that initialize structure, if there is no such a function, type None', help='Function to make structure')
+@click.option('--file_name', prompt='Name of the file (must be with .py extension)',  help = 'Name of the file (must be with .py extension)')
+@click.option("--cleaner", default = 'cleaner' , help = "Give cleaner function")
+@click.option('--function', default ='quicksort', help = 'Name of the class/function to test')
+@click.option('--structure', default='struct', help='Function to make structure')
 @click.option('--time',type=int, help = 'Time for option 3.')
 @click.option('--n', type = int, help = 'Size of problem for option 2.')
 @click.option('--timeout', type = int, default=30, help='Time for running before timeout')
@@ -29,6 +29,8 @@ def main(file_name, function, cleaner, structure, time, n, timeout):
 
     if(timeout == 30):
         get_log().warn("Timeout default: 30 sec")
+
+    print("We will test function", function )
 
 
     try:

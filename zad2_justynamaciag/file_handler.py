@@ -4,26 +4,11 @@ from zad2_justynamaciag import estimation
 import time
 import signal
 
+
 tmp = 10
 times = []
 numbers = []
 
-class Timeout():
-    class Timeout(Exception):
-        pass
-
-    def __init__(self, sec):
-        self.sec = sec
-
-    def __enter__(self):
-        signal.signal(signal.SIGALRM, self.raise_timeout)
-        signal.alarm(self.sec)
-
-    def __exit__(self, *args):
-        signal.alarm(0)
-
-    def raise_timeout(self, *args):
-        raise Timeout.Timeout()
 
 def get_log():
     logging.basicConfig(level=logging.INFO)
@@ -35,7 +20,7 @@ def manage(file_name, function, structure_fun, cleaner, given_time, given_n, tim
     def handler(signum, frame):
         get_log().warn("It seems that times out, we will count complexity based on measurments already taken")
         estimation.estimate_complexity_manager(times, numbers, given_time, given_n)
-        raise Exception("Error: End of time")
+        exit()
 
 
     get_log().info('We are in module file_handler')
@@ -45,21 +30,21 @@ def manage(file_name, function, structure_fun, cleaner, given_time, given_n, tim
     except ImportError:
         get_log().error("An error occured while opening given file")
     else:
-        for i in range(3):
+        signal.signal(signal.SIGALRM, handler)
+        signal.alarm(timeout)
 
-            start_time = time.time()
-
-            signal.signal(signal.SIGALRM, handler)
-            signal.alarm(timeout)
-
+        for i in range(6):
             structure = None
             global tmp
+            tmp = tmp * 10
             if structure_fun != 'None':
-                structure = get_structure(module, structure_fun)
+                structure = get_structure(module, structure_fun, tmp)
+
+            start_time = time.time()
             open_function(module, function, structure)
             structure = None
             open_function(module, cleaner, structure)
-            tmp = tmp * 10
+
 
             end_time = time.time()
             time_measured = (end_time - start_time)
@@ -101,11 +86,11 @@ def open_function(module, function, structure):
 
 
 @manage_decorator
-def get_structure(module, function):
+def get_structure(module, function, size):
 
     try:
         str_method = getattr(module, function)
-        structure = str_method()
+        structure = str_method(size)
     except AttributeError:
         get_log.error("An error while calling function from file (probably given function doesn't exist) - %s", function )
         exit()

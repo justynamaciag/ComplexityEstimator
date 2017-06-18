@@ -2,19 +2,16 @@
 
 from random import randint
 
-
-def fun(tablica):
-    for i in tablica:
-        print(i)
     
 def cleaner():
-    print("Cleaning")
+    return
+    #print("Cleaning")
 
 
-def make_struct():
-    tablica = [3, 7, 1]
-    for i in tablica:
-        print(i)
+def struct(n):
+    tablica = []
+    for i in range(0, n):
+        tablica.append(randint(1, 50))
     return tablica
 
 def quicksort(array):
@@ -44,11 +41,4 @@ def insertionsort( aList ):
        k -= 1
    aList[k] = tmp
    return aList
-
-def create_list():
-    n=150000
-    A = []
-    for i in range(1, n):
-        A.append(randint(1, 100))
-    return A
 

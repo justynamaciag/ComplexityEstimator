@@ -103,22 +103,18 @@ def find_smaller(t, n):
 
     com = []
 
-    n = np.var(np.log(t/n))
-
-    n_com = Complexity('n', n)
+    n_val = np.var(np.log(t/n))
+    n_com = Complexity('n', n_val)
 
     com.append(n_com)
 
-    nlogn = np.var(np.log(t/(n*np.log(n))))
-
-    nlogn_com = Complexity('nlogn', nlogn)
+    nlogn_val = np.var(np.log(t/(n*np.log(n))))
+    nlogn_com = Complexity('nlogn', nlogn_val)
 
     com.append(nlogn_com)
 
-    n2 = np.var(np.log(t/n**2))
-
-
-    n2_com = Complexity('n^2', n2)
+    n2_val = np.var(np.log(t/(n*n)))
+    n2_com = Complexity('n^2', n2_val)
 
     com.append(n2_com)
 
