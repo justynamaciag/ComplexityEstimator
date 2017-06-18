@@ -20,7 +20,7 @@ test_requirements = [
 
 setup(
     name='zad2_justynamaciag',
-    version='0.1.5',
+    version='0.1.6',
     description="Estimating complexity od function",
     long_description=readme + '\n\n' + history,
     author="Justyna Maciąg",
